@@ -1,0 +1,264 @@
+
+.navbar {
+    background: rgb(238, 194, 225);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: rgb(169, 85, 126);
+    background-image: linear-gradient(to top, #a14f64 0%, rgb(213, 109, 139) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+
+}
+
+.navbar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(240, 69, 183);
+    color: white;
+}
+
+.button:hover {
+    background: rgb(243, 114, 207);
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: rgb(231, 52, 198);
+    transition: all 0.3s ease;
+}
+
+@media screen and(max-width: 960px) {
+    .navbar__container {
+        display:flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding:0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    #navbar__logo {
+        padding-left: 25px;
+    }
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white
+    }
+    .navbar__item {
+        width: 100%;
+    }
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate (5%, 20%);
+    }
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
+
+
+  <section id="contact">
+    <p class="section__text__p1">Contact Me!</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+      <img src="email.png" alt="Email icon" class="icon contact-icon">
+      <p><a href="mailto:exampleemail@gmail.com">Example@gmail.com</a>
+      </p>
+    </div>
+      <div class="contact-info-container">
+      <img src="email.png" alt="Email icon" class="icon contact-icon">
+      <p><a href="mailto:exampleemail@gmail.com">Example@gmail.com</a>
+      </p>
+    </div>
+
+    </div>
+  </section>
+
+
+  .menu-links {
+    position: absolute; 
+    top: 100%;
+    right: 0;
+    /*z-index: 9999; */
+    background-color: white;
+    width: 100%; /* Make dropdown full width */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+
+    <section id="projects-content">
+        <p class="section__text__p1">Welcome to my portfolio!</p>
+        <h2 class="title">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="p1.png" alt="Project 1 Screenshot" class="project-img">
+                <div class="project-description">
+                    <h3>Children's Environmental App</h3>
+                    <p>
+                        This is an app that was specially designed for kids ages 7-14 to find environmental issues that they are passionate about and can post about.
+                        I designed the visual aspect of the app, which focuses on a child-friendly design, making it easier for them to use.
+                        This is an app that was msotly created to be used in the classroom and among parents for their kids. 
+                    </p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="carousel">
+                <img src="p2.png" alt="Project 2 Screenshot 1" class="project-img" class="carousel-img active">
+                <img src="p3.png" alt="Project 2 Image 2" class="carousel-img">
+                <img src="p4.png" alt="Project 2 Image 3" class="carousel-img">
+
+                <button class="carousel-btn prev" onclick="moveSlide(-1, 0)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moveSlide(1, 0)">&#10095;</button>
+
+                <div class="project-description">
+                    <h3>Simple Docs!</h3>
+                    <p>
+                        This is a version of Google Docs, but was designed for use among young kids, especially for those in elementary school.
+                        The app retains a lot of functionality from Google Docs, but has a more appealing and easy to use design for children. 
+                        There are animations and colors everywhere, and no drop down menus to preserve the convenience and lower the learning curve for the app.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add More Projects -->
+        </div>
+    </section>

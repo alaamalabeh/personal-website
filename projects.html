@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Alaa Malabeh">
+    <meta name="description" content="Projects - Alaa Malabeh">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="media.css" >
+    <title>Projects - Alaa Malabeh</title>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Alaa Malabeh</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Alaa Malabeh</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+                <li><a href="index.html#resume" onclick="toggleMenu()">Resume</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="projects-content">
+        <p class="section__text__p1">Welcome to my portfolio!</p>
+        <h2 class="title">My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="p1.png" alt="Project 1 Screenshot" class="project-img">
+                <div class="project-description">
+                    <h3>Children's Environmental App</h3>
+                    <p>
+                        This is an app that was specially designed for kids ages 7-14 to find environmental issues that they are passionate about and can post about.
+                        I designed the visual aspect of the app, which focuses on a child-friendly design, making it easier for them to use.
+                        This is an app that was mostly created to be used in the classroom and among parents for their kids.
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="p2.png" alt="Project 2 Screenshot" class="project-img">
+                <div class="project-description">
+                    <h3>Simple Docs!</h3>
+                    <p>
+                        This is a version of Google Docs, but was designed for use among young kids, especially for those in elementary school.
+                        The app retains a lot of functionality from Google Docs, but has a more appealing and easy-to-use design for children.
+                        There are animations and colors everywhere, and no drop-down menus to preserve the convenience and lower the learning curve for the app.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Your name here">
+    <meta name="description" content="About Me - Alaa Malabeh">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="media.css" >
+    <title>About Me - Alaa Malabeh</title>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Alaa Malabeh</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Alaa Malabeh</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul>
+                <li><a href="index.html#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+                <li><a href="index.html#resume" onclick="toggleMenu()">Resume</a></li>
+                <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact Me</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="about-content">
+        <p class="section__text__p1">Get To Know More</p>
+        <h2 class="title">About Me</h2>
+        <div class="about-container">
+            <div class="about-details">
+                <!-- Add your about me content here -->
+                <p>
+                    Hi! I'm Alaa and I'm currently a student at the University of California Irvine (UCI). I am majoring in Software Engineering and minoring in Education Sciences.
+                    I grew up in the Los Angeles area and have been studying at UCI for three years now, and am expecting to graduate in June of 2026.
+                    My UI/UX interests mostly relate to the intersection of education and programming, and I would love to combine my two interests together to create educational technology.
+                    As many of our day to day activities switch to being online, it's important that we work to find new ways to effectively integrate technology in an easy to understand way.
+
+                </p>
+                <!-- You can add more sections as needed -->
+            </div>
+            <div class="about-images">
+                <img src="about1.png" alt="About Me Image 1" class="about-img">
+                <img src="about2.png" alt="About Me Image 2" class="about-img">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

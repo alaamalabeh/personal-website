@@ -11,10 +11,151 @@ EMAIL: Your email here
   <meta name="author" content="Your name here">
   <meta name="description" content="description of your page">
    <!-- you would link to an external stylesheet here! -->
+   <link rel="stylesheet" href="styles.css" >
+   <link rel="stylesheet" href="media.css" >
+
    <!-- you would also link to Bootstrap here! -->
-  <title>title here</title>
+  <title>Alaa Malabeh</title>
 </head>
 <body>
+  <div class="sparkle-background">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+</div>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="a1resume.pdf">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-links">
+      <div class="menu-close" onclick="toggleMenu()">×</div>
+      <ul>
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+      <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+      <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
+    </ul>
+    </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="profilepic.png" alt="Alaa Malabeh profile image">
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hi! I'm</p>
+      <h1 class="title">Alaa Malabeh</h1>
+      <p class="section__text__p2">Software Engineering B.S.</p>
+      <div class="btn-container">
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="linkedin.png" alt="LinkedIn logo" class="icon" onclick="location.href='https://www.linkedin.com/in/alaa-malabeh/'">
+      </div>
+    </div>
+  </section>
+  <!--
+  <section id="about">
+    <p class="section__text__p1"Get To Know More></p>
+    <p class="title"About Me></p>
+    <div class="section-container">
+      <div class="section__pic-container">
+        
+      </div>
+    </div>
+  </section> -->
+  <section id="skills">
+    <h2 class="title">My Skills</h2>
+    <div class="skills-container">
+        <!-- Skill 1 -->
+        <div class="skill">
+            <img src="excel.png" alt="Microsoft Excel" class="skill-image">
+            <p class="skill-name">Microsoft Excel</p>
+        </div>
+        <!-- Skill 2 -->
+        <div class="skill">
+            <img src="python.png" alt="Python Programming" class="skill-image">
+            <p class="skill-name">Python</p>
+        </div>
+        <!-- Skill 3 -->
+        <div class="skill">
+            <img src="html.png" alt="JavaScript" class="skill-image">
+            <p class="skill-name">HTML</p>
+        </div>
+        <div class="skill">
+            <img src="css.png" alt="JavaScript" class="skill-image">
+            <p class="skill-name">CSS</p>
+        </div>
+        <div class="skill">
+            <img src="c++.png" alt="JavaScript" class="skill-image">
+            <p class="skill-name">C++</p>
+        </div>
+        <div class="skill">
+            <img src="r.png" alt="JavaScript" class="skill-image">
+            <p class="skill-name">R Studio</p>
+        </div>
+        <div class="skill">
+            <img src="java.png" alt="JavaScript" class="skill-image">
+            <p class="skill-name">Java</p>
+        </div>
+        <!-- Add more skills as needed -->
+    </div>
+</section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h2 class="title">Contact Me</h2>
+    <div class="contact-container">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-color-1">Send Message</button>
+        </form>
+    </div>
+</section>
+  <script src="app.js"></script>
   <p>
     <a href="http://validator.w3.org/check?uri=referer">
        W3C validator
