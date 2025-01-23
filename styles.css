@@ -212,20 +212,20 @@ section {
 @media screen and (max-width: 768px) {
     #profile {
         padding: 1rem;
-        text-align: center; /* Center-align the text */
+        text-align: center;
     }
 
     .section__text__p1,
     .section__text__p2 {
-        font-size: 1.2rem; /* Scale down text size */
+        font-size: 1.2rem;
     }
 
     .title {
-        font-size: 2rem; /* Adjust heading size */
+        font-size: 2rem;
     }
 
     #socials-container {
-        flex-direction: column; /* Stack icons vertically */
+        flex-direction: column;
         gap: 1rem;
     }
 
@@ -236,31 +236,7 @@ section {
 
 @media screen and (max-width: 576px) {
     .section__pic-container img {
-        width: 150px; /* Further reduce size for very small screens */
-        height: 150px;
-    }
-
-    #profile {
-        gap: 1rem;
-    }
-
-    .section__text__p1,
-    .section__text__p2 {
-        font-size: 1rem; /* Make text smaller */
-    }
-
-    #socials-container {
-        margin-top: 10px;
-    }
-
-    .icon {
-        height: 1.2rem; /* Reduce icon size */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .section__pic-container img {
-        width: 150px; /* Further reduce size for very small screens */
+        width: 150px;
         height: 150px;
     }
 
@@ -278,7 +254,31 @@ section {
     }
 
     .icon {
-        height: 1.2rem; /* Reduce icon size */
+        height: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section__pic-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #profile {
+        gap: 1rem;
+    }
+
+    .section__text__p1,
+    .section__text__p2 {
+        font-size: 1rem;
+    }
+
+    #socials-container {
+        margin-top: 10px;
+    }
+
+    .icon {
+        height: 1.2rem;
     }
 }
 
@@ -550,7 +550,6 @@ section {
     border-top: 3.5px solid #fff;
 }
 
-/* Position stars at different locations */
 .star:nth-child(1) { left: 5%; top: 15%; animation-delay: 0s; }
 .star:nth-child(2) { left: 15%; top: 45%; animation-delay: 0.2s; }
 .star:nth-child(3) { left: 25%; top: 25%; animation-delay: 0.4s; }
