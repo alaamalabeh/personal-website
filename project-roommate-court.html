@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Roommate Court - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Roommate Court - Alaa Malabeh</title>
+</head>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="project-detail" class="fade-in">
+    <div class="project-detail-header">
+      <a class="project-link" href="projects.html">← Back to projects</a>
+      <h1 class="title">Roommate Court</h1>
+    </div>
+
+    <div class="project-detail-carousel">
+      <div class="carousel carousel--large">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="roommate-court-1.png" alt="Roommate Court login screen"></div>
+          <div class="carousel-slide"><img src="roommate-court-2.png" alt="Roommate Court welcome dashboard"></div>
+          <div class="carousel-slide"><img src="roommate-court-3.png" alt="Roommate Court create household modal"></div>
+          <div class="carousel-slide"><img src="roommate-court-4.png" alt="Roommate Court submit a new case form"></div>
+          <div class="carousel-slide"><img src="roommate-court-5.png" alt="Roommate Court All Rise check-in screen"></div>
+          <div class="carousel-slide"><img src="roommate-court-6.png" alt="Roommate Court case document"></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+        <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+        <div class="carousel-dots">
+          <button type="button" class="dot active" aria-label="Slide 1"></button>
+          <button type="button" class="dot" aria-label="Slide 2"></button>
+          <button type="button" class="dot" aria-label="Slide 3"></button>
+          <button type="button" class="dot" aria-label="Slide 4"></button>
+          <button type="button" class="dot" aria-label="Slide 5"></button>
+          <button type="button" class="dot" aria-label="Slide 6"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-body">
+      <p>
+        Roommate Court is a full-stack web platform that turns roommate conflicts into a structured "courtroom" workflow — instead of disputes fizzling out in a group chat, roommates file a case, present evidence, and get a resolution everyone agreed to up front.
+      </p>
+      <p>
+        I built dynamic React components to support case creation and evidence submission, including photo and text uploads, with real-time UI updates so everyone in the household sees the same state as a case moves through the process.
+      </p>
+      <p>
+        For resolving disputes, I implemented a jury-based voting system alongside an automated AI judge that generates a verdict from the submitted evidence and statements, giving households a fair, consistent way to settle disagreements without one person having to play referee.
+      </p>
+      <p>
+        Case tracking and historical records are powered by Firebase, so households can look back on past disputes, rulings, and accountability over time rather than re-litigating the same arguments.
+      </p>
+      <p>
+        I also created low- and high-fidelity mockups early on and translated them into the final UI flows, which kept the experience usable and consistent across the whole app.
+      </p>
+      <div class="project-link-row">
+        <a class="project-link" href="https://roommate-court.web.app/" target="_blank" rel="noopener">Visit site ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

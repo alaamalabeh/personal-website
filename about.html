@@ -1,69 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Your name here">
-    <meta name="description" content="About Me - Alaa Malabeh">
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="media.css" >
-    <title>About Me - Alaa Malabeh</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="About Me - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>About Me - Alaa Malabeh</title>
 </head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Alaa Malabeh</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="index.html#resume">Resume</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Alaa Malabeh</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                <li><a href="index.html#home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
-                <li><a href="index.html#resume" onclick="toggleMenu()">Resume</a></li>
-                <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="index.html#contact" onclick="toggleMenu()">Contact Me</a></li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <section id="about-content">
-        <p class="section__text__p1">Get To Know More</p>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about-content" class="fade-in">
+    <div class="section-tab-wrap">
+      <div class="section-tab"><span class="tab-dot"></span>about.me</div>
+      <div class="section-panel">
+        <span class="section-eyebrow-lav">Get to know more</span>
         <h2 class="title">About Me</h2>
         <div class="about-container">
-            <div class="about-details">
-                <!-- Add your about me content here -->
-                <p>
-                    Hi! I'm Alaa and I'm currently a student at the University of California Irvine (UCI). I am majoring in Software Engineering and minoring in Education Sciences.
-                    I grew up in the Los Angeles area and have been studying at UCI for three years now, and am expecting to graduate in June of 2026.
-                    My UI/UX interests mostly relate to the intersection of education and programming, and I would love to combine my two interests together to create educational technology.
-                    As many of our day to day activities switch to being online, it's important that we work to find new ways to effectively integrate technology in an easy to understand way.
-
-                </p>
-                <!-- You can add more sections as needed -->
-            </div>
-            <div class="about-images">
-                <img src="about1.png" alt="About Me Image 1" class="about-img">
-                <img src="about2.png" alt="About Me Image 2" class="about-img">
-                <!-- Add more images as needed -->
-            </div>
+          <div class="about-details">
+            <p>Hi! I’m Alaa Malabeh, a Software Engineering graduate from the University of California, Irvine, with a passion for building software that is both technically meaningful and genuinely useful.</p>
+            <p>My experience spans software development, DevOps, research, and user-centered design. During my time at Panasonic Avionics, I worked on CI/CD pipelines, automated testing, and Python-based automation tools that helped streamline engineering workflows. I’ve also developed full-stack applications using technologies such as React, Angular, Node.js, Firebase, and SQL, while exploring how thoughtful UI/UX design can make software more intuitive and accessible.</p>
+            <p>One of the projects I’m most proud of is my senior capstone project, a gamified Psychomotor Vigilance Test application built with Unity and C#. As the project manager and developer, I helped turn research goals into a functional software system designed for cognitive testing. The project earned 2nd place at the National Capstone Design Conference Competition and 3rd place at the UCI ICS Project Expo.</p>
+            <p>Beyond development, I’ve been involved in research exploring the impact of AI and large language models on education. I analyzed over 1,200 student survey responses and co-authored a peer-reviewed paper accepted for publication at the International Conference on Computer Science and Education (ICCSE).</p>
+            <p>I enjoy taking on challenging problems, learning new technologies, and working with teams to turn ideas into real-world solutions. I’m especially interested in opportunities where I can combine software engineering, problem-solving, and creativity to build impactful products.</p>
+          </div>
+          <div class="about-images">
+            <div class="about-img-wrap"><img src="about1.png" alt="About Me Image 1" class="about-img"></div>
+            <div class="about-img-wrap"><img src="about2.png" alt="About Me Image 2" class="about-img"></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="app.js"></script>
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

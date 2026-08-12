@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Gamified Psychomotor Vigilance Test (PVT) App - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Gamified PVT App - Alaa Malabeh</title>
+</head>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="project-detail" class="fade-in">
+    <div class="project-detail-header">
+      <a class="project-link" href="projects.html">← Back to projects</a>
+      <h1 class="title">Gamified Psychomotor Vigilance Test (PVT) App</h1>
+    </div>
+
+    <div class="project-detail-carousel">
+      <div class="carousel carousel--large carousel--video">
+        <div class="carousel-track">
+          <div class="carousel-slide"><video src="pvt-1.mp4" controls muted playsinline preload="metadata"></video></div>
+          <div class="carousel-slide"><video src="pvt-2.mp4" controls muted playsinline preload="metadata"></video></div>
+          <div class="carousel-slide"><video src="pvt-3.mp4" controls muted playsinline preload="metadata"></video></div>
+          <div class="carousel-slide"><video src="pvt-4.mp4" controls muted playsinline preload="metadata"></video></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Previous video">‹</button>
+        <button type="button" class="carousel-btn next" aria-label="Next video">›</button>
+        <div class="carousel-dots">
+          <button type="button" class="dot active" aria-label="Slide 1"></button>
+          <button type="button" class="dot" aria-label="Slide 2"></button>
+          <button type="button" class="dot" aria-label="Slide 3"></button>
+          <button type="button" class="dot" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-body">
+      <p>
+        The Gamified Psychomotor Vigilance Test (PVT) App is a Unity and C#-based mobile application built to deliver research-grade cognitive testing for both pediatric and adult users. As project manager and developer on the capstone team, I helped translate stakeholder research goals into a functional software system built specifically for cognitive testing, balancing scientific rigor with an experience that keeps younger participants engaged.
+      </p>
+      <p>
+        At its core, the app preserves standardized PVT mechanics — precise reaction timing, input handling, and validation logic — while wrapping them in more than 30 gamified task variants built in 3D. Each variant was designed and iterated on to keep the underlying measurement consistent across very different game skins, so results stay comparable for research purposes no matter which task a participant plays.
+      </p>
+      <p>
+        Before writing code, I designed low-fidelity and high-fidelity mockups to guide development and user experience, then worked with the team to convert stakeholder research goals into defined system constraints, risks, and plans for future extensibility, so the platform could support long-term research use well beyond the capstone timeline.
+      </p>
+      <p>
+        The project was recognized with 2nd place at the National Capstone Design Conference Competition and 3rd place at the UCI ICS Project Expo.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

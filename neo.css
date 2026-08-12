@@ -1,0 +1,188 @@
+/* ── Site-wide "cute folder" theme ─────────────────────────────
+   Scoped under body.neo-theme (added to every page's <body>).
+   Blends the existing soft/sparkly look (constellation canvas, gradient
+   photo/image rings) with bold black outlines, hard offset shadows, and
+   folder-tab section headers, in pink. */
+
+body.neo-theme {
+  --neo-ink: #2b1f36;
+  --neo-cream: #fff3f8;
+  --neo-pink: #ffb3d9;
+  --neo-pink-soft: #ffe1ee;
+  --neo-shadow: 4px 4px 0 var(--neo-ink);
+  --neo-shadow-lg: 8px 8px 0 var(--neo-ink);
+  --display-neo: 'Baloo 2', cursive;
+  background: var(--neo-cream);
+}
+body.neo-theme #constellation-canvas { opacity: .6; }
+
+/* Navbar (shared across every page) */
+body.neo-theme #desktop-nav {
+  background: #fff;
+  border: 3px solid var(--neo-ink);
+  border-radius: 20px;
+  box-shadow: var(--neo-shadow-lg);
+  backdrop-filter: none;
+}
+body.neo-theme .logo { font-family: var(--display-neo); font-weight: 800; }
+body.neo-theme .nav-links a { font-family: var(--display-neo); font-weight: 700; color: var(--neo-ink); transition: transform .2s; }
+body.neo-theme .nav-links a:hover { transform: rotate(-3deg) scale(1.08); }
+body.neo-theme .nav-icons { display: flex; align-items: center; gap: .6rem; margin-left: 1rem; }
+body.neo-theme .nav-icon-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border: 2.5px solid var(--neo-ink); border-radius: 12px;
+  background: var(--neo-pink-soft); color: var(--neo-ink);
+  box-shadow: 3px 3px 0 var(--neo-ink);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+body.neo-theme .nav-icon-btn img { width: 18px; height: 18px; display: block; object-fit: contain; }
+body.neo-theme .nav-icon-btn:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--neo-ink); }
+body.neo-theme .nav-icon-btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--neo-ink); }
+
+@media (max-width: 768px) {
+  body.neo-theme #hamburger-nav {
+    background: #fff; border-bottom: 3px solid var(--neo-ink); backdrop-filter: none;
+  }
+  body.neo-theme .logo { font-family: var(--display-neo); font-weight: 800; }
+}
+
+/* Headings everywhere */
+body.neo-theme .title,
+body.neo-theme .section-tab,
+body.neo-theme .project-detail-header .title,
+body.neo-theme .project-description h3,
+body.neo-theme .contact-info h3 {
+  font-family: var(--display-neo); font-weight: 800;
+}
+body.neo-theme .section-label,
+body.neo-theme .section-eyebrow,
+body.neo-theme .section-eyebrow-pink,
+body.neo-theme .section-eyebrow-lav {
+  font-family: var(--display-neo); font-weight: 700;
+}
+
+/* Buttons and pill links everywhere */
+body.neo-theme .btn,
+body.neo-theme .linkedin-btn,
+body.neo-theme .project-link {
+  border: 3px solid var(--neo-ink);
+  box-shadow: var(--neo-shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+  font-family: var(--display-neo);
+}
+body.neo-theme .btn:hover,
+body.neo-theme .linkedin-btn:hover,
+body.neo-theme .project-link:hover {
+  transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--neo-ink);
+}
+body.neo-theme .btn:active,
+body.neo-theme .linkedin-btn:active,
+body.neo-theme .project-link:active {
+  transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--neo-ink);
+}
+
+/* Hero (home page only) */
+body.neo-theme .section__pic-container { animation: neoFloat 4.5s ease-in-out infinite; }
+body.neo-theme .section__pic-container img {
+  border: 4px solid var(--neo-ink); box-shadow: var(--neo-shadow-lg);
+}
+body.neo-theme .section__text__p1 {
+  font-family: var(--display-neo); font-weight: 700; color: var(--neo-ink);
+  background: var(--neo-pink); border: 2.5px solid var(--neo-ink);
+  box-shadow: 3px 3px 0 var(--neo-ink);
+  animation: neoPop .5s cubic-bezier(.34,1.56,.64,1) both;
+}
+body.neo-theme .hero-card {
+  border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+body.neo-theme .hero-card:nth-child(1) { background: var(--neo-pink-soft); }
+body.neo-theme .hero-card:nth-child(2) { background: #eee3ff; }
+body.neo-theme .hero-card:nth-child(3) { background: #fff6cf; }
+body.neo-theme .hero-card:hover { animation: neoWiggleCard .4s ease; box-shadow: 6px 6px 0 var(--neo-ink); }
+body.neo-theme .hero-card-label, body.neo-theme .hero-card-value { font-family: var(--display-neo); }
+
+/* The whole stats row lives in one big folder */
+body.neo-theme #profile .section-panel { padding: 1.6rem; }
+
+/* Folder-tab section headers (home, about, projects) */
+body.neo-theme .section-tab-wrap { max-width: 900px; margin: 0 auto; text-align: left; }
+body.neo-theme .section-tab {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: 1rem;
+  color: var(--neo-ink); background: var(--neo-pink);
+  border: 3px solid var(--neo-ink); border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  padding: .6rem 1.4rem .9rem; margin: 0 0 -3px 2rem;
+  position: relative; z-index: 2;
+  animation: neoPop .5s cubic-bezier(.34,1.56,.64,1) both;
+}
+body.neo-theme .tab-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--neo-ink); }
+body.neo-theme .section-panel {
+  position: relative; z-index: 1;
+  background: #fff; border: 3px solid var(--neo-ink);
+  border-radius: 4px 24px 24px 24px;
+  box-shadow: var(--neo-shadow-lg);
+  padding: 3rem;
+}
+body.neo-theme #skills .section-panel,
+body.neo-theme #contact .section-panel,
+body.neo-theme #projects-content .section-panel {
+  text-align: center;
+}
+body.neo-theme #projects-content .section-tab-wrap { max-width: 1300px; }
+body.neo-theme #about-content .section-tab-wrap { max-width: 1000px; }
+@media (max-width: 768px) {
+  body.neo-theme .section-tab { margin-left: 1rem; }
+  body.neo-theme .section-panel { padding: 2rem 1.5rem; }
+}
+
+/* Skills */
+body.neo-theme .skill { border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow); }
+body.neo-theme .skill:hover { animation: neoWiggle .4s ease; box-shadow: 6px 6px 0 var(--neo-ink); }
+body.neo-theme .skill:nth-child(odd) { background: var(--neo-pink-soft); }
+
+/* Contact */
+body.neo-theme .contact-info,
+body.neo-theme #contact-form,
+body.neo-theme .contact-pill {
+  border: 3px solid var(--neo-ink);
+  box-shadow: var(--neo-shadow);
+}
+body.neo-theme .form-group input, body.neo-theme .form-group textarea { border: 2.5px solid var(--neo-ink); }
+
+/* About page */
+body.neo-theme .about-details { border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow-lg); text-align: left; }
+body.neo-theme .about-img { border: 4px solid var(--neo-ink); box-shadow: var(--neo-shadow); }
+body.neo-theme .about-img-wrap { animation: neoFloat 5s ease-in-out infinite; }
+body.neo-theme .about-img-wrap:nth-child(2) { animation-delay: -2.5s; }
+
+/* Projects listing */
+body.neo-theme .project { border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow-lg); }
+body.neo-theme .project:hover { animation: neoWiggleCard .4s ease; box-shadow: 10px 10px 0 var(--neo-ink); }
+body.neo-theme .carousel-btn { border: 2px solid var(--neo-ink); box-shadow: 2px 2px 0 var(--neo-ink); background: #fff; }
+body.neo-theme .carousel-dots .dot { border: 1.5px solid var(--neo-ink); }
+body.neo-theme .carousel-dots .dot.active { background: var(--neo-ink); }
+
+/* Project detail pages */
+body.neo-theme .project-detail-carousel { border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow-lg); }
+body.neo-theme .project-detail-body { border: 3px solid var(--neo-ink); box-shadow: var(--neo-shadow-lg); }
+
+@keyframes neoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes neoWiggle {
+  0%, 100% { transform: rotate(0) translateY(-8px); }
+  25% { transform: rotate(-4deg) translateY(-8px); }
+  75% { transform: rotate(4deg) translateY(-8px); }
+}
+@keyframes neoWiggleCard {
+  0%, 100% { transform: rotate(0) translateY(-4px); }
+  25% { transform: rotate(-4deg) translateY(-4px); }
+  75% { transform: rotate(4deg) translateY(-4px); }
+}
+@keyframes neoPop {
+  from { opacity: 0; transform: translateY(14px) scale(.9); }
+  to { opacity: 1; transform: none; }
+}

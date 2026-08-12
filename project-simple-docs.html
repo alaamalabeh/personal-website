@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Simple Docs! - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Simple Docs! - Alaa Malabeh</title>
+</head>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="project-detail" class="fade-in">
+    <div class="project-detail-header">
+      <a class="project-link" href="projects.html">← Back to projects</a>
+      <h1 class="title">Simple Docs!</h1>
+    </div>
+
+    <div class="project-detail-carousel">
+      <div class="carousel carousel--large carousel--contain">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="p3.png" alt="Simple Docs welcome and login screen"></div>
+          <div class="carousel-slide"><img src="p2.png" alt="Simple Docs document editor with comments"></div>
+          <div class="carousel-slide"><img src="p4.png" alt="Simple Docs document editor with formatting toolbar"></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+        <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+        <div class="carousel-dots">
+          <button type="button" class="dot active" aria-label="Slide 1"></button>
+          <button type="button" class="dot" aria-label="Slide 2"></button>
+          <button type="button" class="dot" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-body">
+      <p>
+        Simple Docs! is a version of Google Docs designed for use among young kids, especially those in elementary school. It retains a lot of the core functionality of Google Docs — writing, formatting, sharing, and commenting — but wraps it in a more appealing and easy-to-use design built for children.
+      </p>
+      <p>
+        The login and welcome screens use friendly illustrations and large, simple fields so kids can sign in independently, while the editor keeps the essentials — bold, italic, underline, font and size controls, images, stickers, and shapes — front and center.
+      </p>
+      <p>
+        There are animations and colors everywhere, and no drop-down menus, which preserves convenience and lowers the learning curve for the app compared to a full-featured word processor built for adults.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

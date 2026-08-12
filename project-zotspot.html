@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Zot Spot - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Zot Spot - Alaa Malabeh</title>
+</head>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="project-detail" class="fade-in">
+    <div class="project-detail-header">
+      <a class="project-link" href="projects.html">← Back to projects</a>
+      <h1 class="title">Zot Spot</h1>
+    </div>
+
+    <div class="project-detail-carousel">
+      <div class="carousel carousel--large">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="zotspot-1.png" alt="Zot Spot interactive campus map with bathroom locations"></div>
+          <div class="carousel-slide"><img src="zotspot-2.png" alt="Zot Spot home page"></div>
+          <div class="carousel-slide"><img src="zotspot-3.png" alt="Zot Spot helpful resources page"></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+        <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+        <div class="carousel-dots">
+          <button type="button" class="dot active" aria-label="Slide 1"></button>
+          <button type="button" class="dot" aria-label="Slide 2"></button>
+          <button type="button" class="dot" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-body">
+      <p>
+        Zot Spot is a hackathon project (VenusHacks) built to solve a very specific, very real problem: it's often unclear which bathrooms on a college campus actually have period products, or whether they're free. Zot Spot helps UC Irvine students quickly locate free period products across campus instead of guessing.
+      </p>
+      <p>
+        The centerpiece is an interactive campus map that plots bathroom locations across UCI, each pin showing live stock status for pads and tampons, whether the products are free, wheelchair accessibility, and distance and walking time from the user's location — so someone in need can find the nearest reliable option fast.
+      </p>
+      <p>
+        Beyond the map, Zot Spot includes a curated resources page linking to campus and community organizations covering menstrual health, wellness, and support services, so the app is useful even beyond the immediate "where is the nearest bathroom" question.
+      </p>
+      <p>
+        Building this in a hackathon environment meant fast, focused decisions — the priority was getting a genuinely useful tool in front of students rather than polishing every edge case.
+      </p>
+      <div class="project-link-row">
+        <a class="project-link" href="https://venushacks-1.onrender.com/" target="_blank" rel="noopener">Visit site ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

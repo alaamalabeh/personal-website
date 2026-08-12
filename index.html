@@ -10,156 +10,154 @@ EMAIL: malabeha@uci.edu
   <meta charset="utf-8">
   <meta name="author" content="Alaa Malabeh">
   <meta name="description" content="personal portfolio website">
-   <!-- you would link to an external stylesheet here! -->
-   <link rel="stylesheet" href="styles.css" >
-   <link rel="stylesheet" href="media.css" >
-
-   <!-- you would also link to Bootstrap here! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
   <title>Alaa Malabeh</title>
 </head>
-<body>
-  <div class="sparkle-background">
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-</div>
+
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
 
   <nav id="desktop-nav">
     <div class="logo">Alaa Malabeh</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="a1resume.pdf">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
+    <ul class="nav-links">
+      <li><a href="#profile">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a class="nav-icon-btn" href="https://www.linkedin.com/in/alaa-malabeh/" target="_blank" aria-label="LinkedIn">
+        <img src="linkedin-icon.png" alt="">
+      </a>
+      <a class="nav-icon-btn" href="a1resume.pdf" download aria-label="Download resume">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+      </a>
     </div>
   </nav>
+
   <nav id="hamburger-nav">
     <div class="logo">Alaa Malabeh</div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="menu-links">
-      <div class="menu-close" onclick="toggleMenu()">×</div>
-      <ul>
-      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-      <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
-      <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
-      <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
-    </ul>
-    </div>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+
   <section id="profile">
     <div class="section__pic-container">
       <img src="profilepic.png" alt="Alaa Malabeh profile image">
     </div>
     <div class="section__text">
-      <p class="section__text__p1">Hi! I'm</p>
+      <p class="section__text__p1">Hi, I'm</p>
       <h1 class="title">Alaa Malabeh</h1>
-      <p class="section__text__p2">Software Engineering B.S.</p>
+      <p class="section__text__p2">Software Engineering B.S., UC Irvine</p>
+      <p class="hero-bio">I’m a software engineering graduate who loves turning ideas into real, meaningful projects, with experience ranging from automating workflows in industry to building an award-winning cognitive testing application and researching AI’s impact on education. I’m especially passionate about learning, creating, and using technology to make people’s lives a little easier.
+</p>
       <div class="btn-container">
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me
-        </button>
+        <button class="btn btn-color-2" onclick="location.href='a1resume.pdf'">View Resume</button>
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/alaa-malabeh/" target="_blank">
+          <img src="linkedin-icon.png" alt="LinkedIn">
+          <span>LinkedIn</span>
+        </a>
       </div>
-      <div id="socials-container">
-        <img src="linkedin.png" alt="LinkedIn logo" class="icon" onclick="location.href='https://www.linkedin.com/in/alaa-malabeh/'">
+      <div class="section-tab-wrap">
+        <div class="section-tab"><span class="tab-dot"></span>info.txt</div>
+        <div class="section-panel">
+          <div class="hero-cards">
+            <div class="hero-card">
+              <span class="hero-card-label">Degree</span>
+              <span class="hero-card-value">Software Eng.</span>
+            </div>
+            <div class="hero-card">
+              <span class="hero-card-label">University</span>
+              <span class="hero-card-value">UC Irvine</span>
+            </div>
+            <div class="hero-card">
+              <span class="hero-card-label">Status</span>
+              <span class="hero-card-value">Open to Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="skills" class="fade-in">
+    <div class="section-tab-wrap">
+      <div class="section-tab"><span class="tab-dot"></span>skills.exe</div>
+      <div class="section-panel">
+        <span class="section-eyebrow">What I work with</span>
+        <h2 class="title">My Skills</h2>
+        <div class="skills-container">
+          <div class="skill"><img src="excel.png"  alt="Excel"  class="skill-image"><p class="skill-name">Microsoft Excel</p></div>
+          <div class="skill"><img src="python.png" alt="Python" class="skill-image"><p class="skill-name">Python</p></div>
+          <div class="skill"><img src="html.png"   alt="HTML"   class="skill-image"><p class="skill-name">HTML</p></div>
+          <div class="skill"><img src="css.png"    alt="CSS"    class="skill-image"><p class="skill-name">CSS</p></div>
+          <div class="skill"><img src="c++.png"    alt="C++"    class="skill-image"><p class="skill-name">C++</p></div>
+          <div class="skill"><img src="r.png"      alt="R"      class="skill-image"><p class="skill-name">R Studio</p></div>
+          <div class="skill"><img src="java.png"   alt="Java"   class="skill-image"><p class="skill-name">Java</p></div>
+          <div class="skill"><img src="figma.svg"      alt="Figma"      class="skill-image"><p class="skill-name">Figma</p></div>
+          <div class="skill"><img src="unity.svg"      alt="Unity"      class="skill-image"><p class="skill-name">Unity</p></div>
+          <div class="skill"><img src="playwright.svg" alt="Playwright" class="skill-image"><p class="skill-name">Playwright</p></div>
+          <div class="skill"><img src="selenium.svg"   alt="Selenium"   class="skill-image"><p class="skill-name">Selenium</p></div>
+          <div class="skill"><img src="aws.svg"        alt="AWS"        class="skill-image"><p class="skill-name">AWS</p></div>
+        </div>
       </div>
     </div>
   </section>
-  <!--
-  <section id="about">
-    <p class="section__text__p1"Get To Know More></p>
-    <p class="title"About Me></p>
-    <div class="section-container">
-      <div class="section__pic-container">
-        
-      </div>
-    </div>
-  </section> -->
-  <section id="skills">
-    <h2 class="title">My Skills</h2>
-    <div class="skills-container">
-        <!-- Skill 1 -->
-        <div class="skill">
-            <img src="excel.png" alt="Microsoft Excel" class="skill-image">
-            <p class="skill-name">Microsoft Excel</p>
-        </div>
-        <!-- Skill 2 -->
-        <div class="skill">
-            <img src="python.png" alt="Python Programming" class="skill-image">
-            <p class="skill-name">Python</p>
-        </div>
-        <!-- Skill 3 -->
-        <div class="skill">
-            <img src="html.png" alt="JavaScript" class="skill-image">
-            <p class="skill-name">HTML</p>
-        </div>
-        <div class="skill">
-            <img src="css.png" alt="JavaScript" class="skill-image">
-            <p class="skill-name">CSS</p>
-        </div>
-        <div class="skill">
-            <img src="c++.png" alt="JavaScript" class="skill-image">
-            <p class="skill-name">C++</p>
-        </div>
-        <div class="skill">
-            <img src="r.png" alt="JavaScript" class="skill-image">
-            <p class="skill-name">R Studio</p>
-        </div>
-        <div class="skill">
-            <img src="java.png" alt="JavaScript" class="skill-image">
-            <p class="skill-name">Java</p>
-        </div>
-        <!-- Add more skills as needed -->
-    </div>
-</section>
 
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h2 class="title">Contact Me</h2>
-    <div class="contact-container">
-        <form id="contact-form">
+  <section id="contact" class="fade-in">
+    <div class="section-tab-wrap">
+      <div class="section-tab"><span class="tab-dot"></span>contact.txt</div>
+      <div class="section-panel">
+        <span class="section-eyebrow-pink">Let's connect</span>
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Let's build something fun together!</h3>
+            <p>I'm always open to new opportunities, collabs, or just a friendly chat. Drop me a message!</p>
+            <div class="contact-pill">malabeha@uci.edu</div>
+            <br>
+            <div class="contact-pill">Irvine, California</div>
+          </div>
+          <form id="contact-form">
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
             <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
             </div>
             <button type="submit" class="btn btn-color-1">Send Message</button>
-        </form>
+          </form>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
   <script src="app.js"></script>
-  <p>
-    <a href="http://validator.w3.org/check?uri=referer">
-       W3C validator
-    </a>
-  </p>
 </body>
 </html>

@@ -1,72 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Alaa Malabeh">
-    <meta name="description" content="Projects - Alaa Malabeh">
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="media.css" >
-    <title>Projects - Alaa Malabeh</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Projects - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Projects - Alaa Malabeh</title>
 </head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Alaa Malabeh</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="index.html#resume">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#contact">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Alaa Malabeh</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="menu-links">
-                <li><a href="index.html#home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
-                <li><a href="index.html#resume" onclick="toggleMenu()">Resume</a></li>
-                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="index.html#contact" onclick="toggleMenu()">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section id="projects-content">
-        <p class="section__text__p1">Welcome to my portfolio!</p>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="projects-content" class="fade-in">
+    <div class="section-tab-wrap">
+      <div class="section-tab"><span class="tab-dot"></span>projects/</div>
+      <div class="section-panel">
+        <span class="section-label">Welcome to my portfolio</span>
         <h2 class="title">My Projects</h2>
         <div class="projects-container">
-            <div class="project">
-                <img src="p1.png" alt="Project 1 Screenshot" class="project-img">
-                <div class="project-description">
-                    <h3>Children's Environmental App</h3>
-                    <p>
-                        This is an app that was specially designed for kids ages 7-14 to find environmental issues that they are passionate about and can post about.
-                        I designed the visual aspect of the app, which focuses on a child-friendly design, making it easier for them to use.
-                        This is an app that was mostly created to be used in the classroom and among parents for their kids.
-                    </p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="p2.png" alt="Project 2 Screenshot" class="project-img">
-                <div class="project-description">
-                    <h3>Simple Docs!</h3>
-                    <p>
-                        This is a version of Google Docs, but was designed for use among young kids, especially for those in elementary school.
-                        The app retains a lot of functionality from Google Docs, but has a more appealing and easy-to-use design for children.
-                        There are animations and colors everywhere, and no drop-down menus to preserve the convenience and lower the learning curve for the app.
-                    </p>
-                </div>
-            </div>
+      <div class="project" data-project="pvt">
+        <div class="carousel carousel--video">
+          <div class="carousel-track">
+            <div class="carousel-slide"><video src="pvt-1.mp4" controls muted playsinline preload="metadata"></video></div>
+            <div class="carousel-slide"><video src="pvt-2.mp4" controls muted playsinline preload="metadata"></video></div>
+            <div class="carousel-slide"><video src="pvt-3.mp4" controls muted playsinline preload="metadata"></video></div>
+            <div class="carousel-slide"><video src="pvt-4.mp4" controls muted playsinline preload="metadata"></video></div>
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous video">‹</button>
+          <button type="button" class="carousel-btn next" aria-label="Next video">›</button>
+          <div class="carousel-dots">
+            <button type="button" class="dot active" aria-label="Slide 1"></button>
+            <button type="button" class="dot" aria-label="Slide 2"></button>
+            <button type="button" class="dot" aria-label="Slide 3"></button>
+            <button type="button" class="dot" aria-label="Slide 4"></button>
+          </div>
         </div>
-    </section>
+        <div class="project-description">
+          <h3>Gamified Psychomotor Vigilance Test (PVT) App</h3>
+          <p>
+            A Unity and C#-based mobile app that delivers research-grade cognitive testing for pediatric and adult users through gamified reaction-time challenges. As project manager and developer, I built and iterated on 30+ gamified task variants while preserving standardized PVT mechanics, including reaction timing, input handling, and validation logic. Awarded 2nd place at the National Capstone Design Conference Competition and 3rd place at the UCI ICS Project Expo.
+          </p>
+          <div class="project-link-row">
+            <a class="project-link project-link--details" href="project-pvt.html">View details →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-project="roommate-court">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="roommate-court-1.png" alt="Roommate Court login screen"></div>
+            <div class="carousel-slide"><img src="roommate-court-2.png" alt="Roommate Court welcome dashboard"></div>
+            <div class="carousel-slide"><img src="roommate-court-3.png" alt="Roommate Court create household modal"></div>
+            <div class="carousel-slide"><img src="roommate-court-4.png" alt="Roommate Court submit a new case form"></div>
+            <div class="carousel-slide"><img src="roommate-court-5.png" alt="Roommate Court All Rise check-in screen"></div>
+            <div class="carousel-slide"><img src="roommate-court-6.png" alt="Roommate Court case document"></div>
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+          <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+          <div class="carousel-dots">
+            <button type="button" class="dot active" aria-label="Slide 1"></button>
+            <button type="button" class="dot" aria-label="Slide 2"></button>
+            <button type="button" class="dot" aria-label="Slide 3"></button>
+            <button type="button" class="dot" aria-label="Slide 4"></button>
+            <button type="button" class="dot" aria-label="Slide 5"></button>
+            <button type="button" class="dot" aria-label="Slide 6"></button>
+          </div>
+        </div>
+        <div class="project-description">
+          <h3>Roommate Court</h3>
+          <p>
+            A full-stack web platform that transforms roommate conflicts into a structured "courtroom" workflow. Built dynamic React components for case creation and evidence submission, a jury-based voting system, and an automated AI judge that generates verdicts. Case tracking and historical records are powered by Firebase.
+          </p>
+          <div class="project-link-row">
+            <a class="project-link" href="https://roommate-court.web.app/" target="_blank" rel="noopener">Visit site ↗</a>
+            <a class="project-link project-link--details" href="project-roommate-court.html">View details →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-project="zotspot">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="zotspot-1.png" alt="Zot Spot interactive campus map with bathroom locations"></div>
+            <div class="carousel-slide"><img src="zotspot-2.png" alt="Zot Spot home page"></div>
+            <div class="carousel-slide"><img src="zotspot-3.png" alt="Zot Spot helpful resources page"></div>
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+          <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+          <div class="carousel-dots">
+            <button type="button" class="dot active" aria-label="Slide 1"></button>
+            <button type="button" class="dot" aria-label="Slide 2"></button>
+            <button type="button" class="dot" aria-label="Slide 3"></button>
+          </div>
+        </div>
+        <div class="project-description">
+          <h3>Zot Spot</h3>
+          <p>
+            A hackathon project built to help UC Irvine students quickly locate free period products on campus. An interactive map plots bathroom locations across UCI, with live stock status for pads and tampons, wheelchair accessibility, and distance/walking time, alongside a curated page of menstrual health and wellness resources.
+          </p>
+          <div class="project-link-row">
+            <a class="project-link" href="https://venushacks-1.onrender.com/" target="_blank" rel="noopener">Visit site ↗</a>
+            <a class="project-link project-link--details" href="project-zotspot.html">View details →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-project="kids-app">
+        <img src="p1.png" alt="Project 1 Screenshot" class="project-img">
+        <div class="project-description">
+          <h3>Children's Environmental App</h3>
+          <p>
+            This is an app that was specially designed for kids ages 7-14 to find environmental issues that they are passionate about and can post about.
+            I designed the visual aspect of the app, which focuses on a child-friendly design, making it easier for them to use.
+            This is an app that was mostly created to be used in the classroom and among parents for their kids.
+          </p>
+          <div class="project-link-row">
+            <a class="project-link project-link--details" href="project-kids-app.html">View details →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-project="simple-docs">
+        <img src="p2.png" alt="Project 2 Screenshot" class="project-img">
+        <div class="project-description">
+          <h3>Simple Docs!</h3>
+          <p>
+            This is a version of Google Docs, but was designed for use among young kids, especially for those in elementary school.
+            The app retains a lot of functionality from Google Docs, but has a more appealing and easy-to-use design for children.
+            There are animations and colors everywhere, and no drop-down menus to preserve the convenience and lower the learning curve for the app.
+          </p>
+          <div class="project-link-row">
+            <a class="project-link project-link--details" href="project-simple-docs.html">View details →</a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="app.js"></script>
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

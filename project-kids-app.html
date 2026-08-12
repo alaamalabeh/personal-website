@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alaa Malabeh">
+  <meta name="description" content="Children's Environmental App - Alaa Malabeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="neo.css">
+  <title>Children's Environmental App - Alaa Malabeh</title>
+</head>
+<body class="neo-theme">
+  <canvas id="constellation-canvas"></canvas>
+
+  <nav id="desktop-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="a1resume.pdf">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Alaa Malabeh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" id="mobile-menu">
+        <div class="menu-close" onclick="toggleMenu()">×</div>
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About Me</a></li>
+          <li><a href="a1resume.pdf" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="project-detail" class="fade-in">
+    <div class="project-detail-header">
+      <a class="project-link" href="projects.html">← Back to projects</a>
+      <h1 class="title">Children's Environmental App</h1>
+    </div>
+
+    <div class="project-detail-carousel">
+      <div class="carousel carousel--large carousel--contain">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="p1.png" alt="Children's Environmental App screen mockups: home, account, articles, explore, and messages"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-body">
+      <p>
+        This app was specially designed for kids ages 7–14 to find environmental issues that they're passionate about and can post about. The goal was to make environmental awareness and civic participation feel approachable for a young audience, rather than abstract or overwhelming.
+      </p>
+      <p>
+        I designed the visual aspect of the app, focusing on a child-friendly design language — clear icons, bright colors, and simple flows — that makes it easy for younger users to navigate on their own.
+      </p>
+      <p>
+        The app was mostly created to be used in the classroom and among parents for their kids, so the account and posting flows were designed with parental oversight in mind alongside the kid-facing experience.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alaa Malabeh &nbsp;·&nbsp;
+    <a href="http://validator.w3.org/check?uri=referer">W3C Validator</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
