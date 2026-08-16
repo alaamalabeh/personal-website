@@ -101,8 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       if (isValid) {
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert('Thank you for your message! I will get back to you soon.');
+              contactForm.reset();
+            } else {
+              alert('Something went wrong sending your message. Please try again or email me directly.');
+            }
+          })
+          .catch(() => {
+            alert('Something went wrong sending your message. Please try again or email me directly.');
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+          });
       }
     });
   }
